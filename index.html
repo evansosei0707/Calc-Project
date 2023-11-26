@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <br>
+    <p class="js-calc-total result"></p>
+    <br>
+    <div class="calculator">
+        <button onclick="
+        updateCalculator(1);
+        ">
+        1
+    </button>
+    <button onclick="
+        updateCalculator(2);
+        ">
+        2
+    </button>
+    <button onclick="
+        updateCalculator(3);
+        ">
+        3
+    </button>
+    <button class="specific" onclick="
+    updateCalculator('+')">
+    +
+    </button>
+    <button onclick="
+        updateCalculator(4);
+       ">
+        4
+    </button>
+    <button onclick="
+        updateCalculator(5);
+      ">
+        5
+    </button>
+    <button onclick="
+        updateCalculator(6);
+">
+        6
+    </button>
+    <button class="specific" onclick="
+        updateCalculator('-');
+        ">
+        -
+    </button>
+    <button onclick="
+        updateCalculator(7);
+        ">
+        7
+    </button>
+    <button onclick="
+       updateCalculator(8);
+      ">
+        8
+    </button>
+    <button onclick="
+        updateCalculator(9);
+        ">
+        9
+    </button>
+    <button class="specific" onclick="
+        updateCalculator('*');
+    "> *
+    </button>
+    <button onclick="
+        updateCalculator(0);
+        ">
+        0
+    </button>
+    <button  onclick="
+        updateCalculator('.');
+       "> .
+    </button>
+    <button onclick="
+        calculation = eval(calculation);
+        document.querySelector('.js-calc-total').innerHTML = calculation;
+        ">
+        =
+    </button>
+    <button class="specific" onclick="
+        updateCalculator('/');
+    "> /
+    </button>
+    <button onclick="
+        calculation = '';
+        localStorage.removeItem('savedResult');
+        document.querySelector('.js-calc-total').innerHTML = calculation;
+        ">
+        clear
+    </button>
+
+    </div>
+    
+
+    <script src="calculator.js"></script>
+    
+</body>
+</html>
